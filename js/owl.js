@@ -738,7 +738,7 @@
 			this.on(window, 'resize', this._handlers.onThrottledResize);
 		}
 
-		if (this.settings.mouseDrag) {
+		if (!this.settings.mouseDrag) {
 			this.$element.addClass(this.options.dragClass);
 			this.$stage.on('mousedown.owl.core', $.proxy(this.onDragStart, this));
 			this.$stage.on('dragstart.owl.core selectstart.owl.core', function() { return false });
@@ -2671,7 +2671,7 @@
 			}, this),
 			'initialized.owl.carousel': $.proxy(function(e) {
 				if (e.namespace && this._core.settings.autoplay) {
-					this.play();
+					this.stop();
 				}
 			}, this),
 			'play.owl.autoplay': $.proxy(function(e, t, s) {
