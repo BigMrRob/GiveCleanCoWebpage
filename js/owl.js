@@ -2659,7 +2659,7 @@
 			'changed.owl.carousel': $.proxy(function(e) {
 				if (e.namespace && e.property.name === 'settings') {
 					if (this._core.settings.autoplay) {
-						this.play();
+						this.stop();
 					} else {
 						this.stop();
 					}
