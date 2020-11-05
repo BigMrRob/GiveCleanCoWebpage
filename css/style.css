@@ -2482,7 +2482,9 @@ img{
 	
 }
 
-
+.checkboxgroup {
+	padding: 10px;
+}
 .image:hover .overlay {
 	opacity: 1;
 
